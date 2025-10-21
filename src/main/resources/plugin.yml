@@ -1,0 +1,21 @@
+name: Dummy
+version: '1.0.0'
+main: de.scholle.dummy.Dummy
+api-version: '1.18'
+prefix: Dummy
+load: STARTUP
+authors: [ Mobilestars ]
+description: Logout-Dummy-Plugin
+website: https://modrinth.com/project/dummy
+
+depend: [FancyNpcs]
+
+commands:
+  dummy:
+    description: Verwaltung von Logout-Dummies
+    usage: /dummy <reload|list>
+
+permissions:
+  dummy.admin:
+    description: Adminrechte für Dummy-Plugin
+    default: op

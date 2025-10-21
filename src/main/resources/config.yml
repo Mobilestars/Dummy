@@ -1,0 +1,123 @@
+# LogoutDummy Configuration
+
+# Allgemeine Einstellungen
+general:
+  # Lebensdauer des Dummies in Sekunden (standard: 15)
+  dummy-duration: 30
+  # Soll der Dummy Items droppen, wenn er besiegt wird?
+  drop-items: true
+  # Soll der Dummy Schaden durch Projektile nehmen?
+  allow-projectiles: true
+
+# Dummy Erscheinungsbild
+appearance:
+  # Anzeigename-Format für den Dummy
+  # Verfügbare Platzhalter: {player}, {health}, {maxhealth}, {time}
+  name-format: "<red>Offline</red> <gray>|</gray> <gold><bold>{player}</bold></gold> <gray>|</gray> {hearts} <gray>({time}s)</gray>"
+
+  # Soll der Dummy die Skin des Spielers verwenden?
+  use-player-skin: true
+
+  # Soll der Dummy die Ausrüstung des Spielers anzeigen?
+  show-equipment: true
+
+# Schadensberechnung
+damage:
+  # Basis-Schaden für verschiedene Waffen
+  weapon-damage:
+    NETHERITE_SWORD: 8.0
+    DIAMOND_SWORD: 7.0
+    IRON_SWORD: 6.0
+    STONE_SWORD: 5.0
+    GOLDEN_SWORD: 4.0
+    WOODEN_SWORD: 4.0
+    NETHERITE_AXE: 10.0
+    DIAMOND_AXE: 9.0
+    IRON_AXE: 9.0
+    STONE_AXE: 9.0
+    GOLDEN_AXE: 7.0
+    WOODEN_AXE: 7.0
+    default: 3.0
+
+  # Kritischer Schaden-Multiplikator
+  critical-multiplier: 1.5
+
+  # Stärke-Effekt-Bonus pro Level
+  strength-bonus: 3.0
+
+# Rüstungsberechnung
+armor:
+  # Rüstungspunkte pro Rüstungsteil
+  armor-points:
+    LEATHER_HELMET: 1
+    LEATHER_CHESTPLATE: 3
+    LEATHER_LEGGINGS: 2
+    LEATHER_BOOTS: 1
+    GOLDEN_HELMET: 2
+    GOLDEN_CHESTPLATE: 5
+    GOLDEN_LEGGINGS: 4
+    GOLDEN_BOOTS: 1
+    CHAINMAIL_HELMET: 2
+    CHAINMAIL_CHESTPLATE: 5
+    CHAINMAIL_LEGGINGS: 4
+    CHAINMAIL_BOOTS: 1
+    IRON_HELMET: 2
+    IRON_CHESTPLATE: 6
+    IRON_LEGGINGS: 5
+    IRON_BOOTS: 2
+    DIAMOND_HELMET: 3
+    DIAMOND_CHESTPLATE: 8
+    DIAMOND_LEGGINGS: 6
+    DIAMOND_BOOTS: 3
+    NETHERITE_HELMET: 3
+    NETHERITE_CHESTPLATE: 8
+    NETHERITE_LEGGINGS: 6
+    NETHERITE_BOOTS: 3
+
+  # Zähigkeit pro Rüstungsteil
+  toughness:
+    DIAMOND_HELMET: 2.0
+    DIAMOND_CHESTPLATE: 2.0
+    DIAMOND_LEGGINGS: 2.0
+    DIAMOND_BOOTS: 2.0
+    NETHERITE_HELMET: 3.0
+    NETHERITE_CHESTPLATE: 3.0
+    NETHERITE_LEGGINGS: 3.0
+    NETHERITE_BOOTS: 3.0
+
+# NPC-Verhalten
+npc-behavior:
+  # Soll der NPC sich zu Spielern umdrehen?
+  look-at-players: true
+  # Kann der NPC sich bewegen?
+  can-move: false
+  # Kann der NPC angreifen?
+  can-attack: false
+  # Soll der NPC die Pose des Spielers imitieren?
+  imitate-player: false
+
+# Sound-Effekte
+sounds:
+  # Sound beim Treffen des Dummies
+  hit-sound: "ENTITY_PLAYER_HURT"
+  hit-volume: 1.0
+  hit-pitch: 1.0
+  hit-category: "PLAYERS"
+
+# Nachrichten
+messages:
+  # Broadcast-Nachricht wenn ein Dummy besiegt wird
+  # Verfügbare Platzhalter: {player}, {killer}
+  kill-broadcast: "§f[§6§lDummy§f] §c{player} §fwurde von §a{killer} §fals Offline-Dummy besiegt."
+
+  # Nachricht wenn der Spieler nach Dummy-Tod rejoined
+  death-on-join: "§7Dein Dummy wurde besiegt während du offline warst."
+
+# Debug
+debug:
+  # Debug-Modus aktivieren (zeigt mehr Log-Nachrichten)
+  enabled: false
+  # Logge Dummy-Erstellung
+  log-creation: true
+  # Logge Dummy-Zerstörung
+  log-destruction: true
