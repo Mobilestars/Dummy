@@ -9,10 +9,8 @@ public final class Dummy extends JavaPlugin {
     private DummyManager dummyManager;
 
     public void onEnable() {
-        // Standard-Config erstellen
         saveDefaultConfig();
 
-        // Config-Werte setzen falls nicht vorhanden
         getConfig().addDefault("general.dummy-duration", 30);
         getConfig().addDefault("general.drop-items", true);
         getConfig().addDefault("general.allow-projectiles", true);
@@ -50,7 +48,6 @@ public final class Dummy extends JavaPlugin {
         return dummyManager;
     }
 
-    // Hilfsmethoden für Config-Zugriff
     public int getDummyDuration() {
         return getConfig().getInt("general.dummy-duration", 15);
     }

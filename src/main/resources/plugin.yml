@@ -1,11 +1,11 @@
 name: Dummy
-version: '1.0.0'
+version: '1.0.1'
 main: de.scholle.dummy.Dummy
 api-version: '1.18'
 prefix: Dummy
 load: STARTUP
 authors: [ Mobilestars ]
-description: Logout-Dummy-Plugin
+description: A NPC dummy represents offline players, showing their skin and carrying their gear.
 website: https://modrinth.com/project/dummy
 
 depend: [FancyNpcs]

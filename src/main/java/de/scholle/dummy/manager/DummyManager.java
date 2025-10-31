@@ -117,7 +117,6 @@ public class DummyManager implements Listener {
     }
 
     public void onDummyHit(final ArmorStand ignored, final Player damager) {
-        // Basic implementation for dummy hit handling
     }
 
     public void suppressSpawn(final UUID id) {
